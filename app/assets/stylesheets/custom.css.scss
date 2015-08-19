@@ -27,8 +27,8 @@ textarea {
 }
 
 .remy {
-  width:75px;
-  height:75px;
+  width:45px;
+  height:45px;
 }
 
 /* typography */
@@ -61,7 +61,8 @@ p {
 
 /* header */
 
-#logo {
+.logo {
+  text-shadow: black 1px 5px 10px;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -76,6 +77,33 @@ p {
   }
 }
 
+
+#nav-bar li:hover {
+  background-color: rgba(0,128,0,.3);
+}
+
+
+
+/* home page */
+#home-box {
+  opacity: .85;
+  background-color: green;
+  margin: 50px auto auto 50px;
+}
+
+#logo-word {
+  margin-left:-20%;
+}
+
+#ful {
+  color: green;
+  text-shadow: black 1px 10px 20px;
+}
+
+#btn-home {
+  background: black;
+  width: 200px;
+}
 /* footer */
 
 footer {
