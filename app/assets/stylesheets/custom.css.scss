@@ -54,7 +54,10 @@ p {
   line-height: 1.7em;
 }
 
-
+/* alerts */
+.alert {
+  text-align: center;
+}
 /* header */
 
 .logo {
@@ -104,7 +107,7 @@ p {
 }
 
 #logo-word {
-  margin-left:-16%;
+  margin-left:-33%;
   color: white;
   display: inline-block;
   vertical-align: middle;
@@ -195,11 +198,23 @@ aside {
       line-height: 1;
     }
     h1 {
+      color: white;
+      text-shadow: green 1px 3px 3px;
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+      margin-top: 0px;
+    }
+    h2 {
       font-size: 1.4em;
       text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
+    }
+    a, a:visited, a:link {
+      color: green;
     }
   }
 }
@@ -269,12 +284,61 @@ input {
 
 /* microposts */
 
+
+.user-container {
+  width: 20%;
+  padding: 25px;
+  border-radius: 5px;
+  opacity: .85;
+  background-color: black;
+  margin-right: 50px;
+}
+
+.post-container {
+  width: 70%;
+  padding: 25px;
+  border-radius: 5px;
+  opacity: .85;
+  background-color: black;
+}
+
+.feed-container {
+  width: 50%;
+  padding: 25px;
+  border-radius: 5px;
+  opacity: .85;
+  background-color: black;
+}
+
+.new-post-container {
+  width: 45%;
+  padding: 25px;
+  border-radius: 5px;
+  opacity: .85;
+  background-color: black;
+  margin-right: 50px;
+}
+
+#post-title {
+  text-align: center;
+  color: green;
+  text-shadow: green 1px 5px 10px;
+  font-size: 36px;
+  font-weight: 200;
+}
 .microposts {
   list-style: none;
-  padding: 0;
+  padding: 5px;
+  background: black;
+  border-radius: 5px;
+  a, a:visited, a:link {
+    color: green;
+    text-shadow: green 1px 1px 1px;
+  }
   li {
+    color: white;
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid green;
   }
   .user {
     margin-top: 5em;

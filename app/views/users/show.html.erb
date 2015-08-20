@@ -1,16 +1,24 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  <aside class="col-md-4">
+  <aside class="col-md-4 user-container">
     <section class="user_info">
       <h1>
-        <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <h2>
+        <%= link_to "New Post", new_micropost_path %>
+      </h2>
+      <h2>
+        <%= link_to "Followers", '#' %>
+      </h2>
+      <h2>
+        <%= link_to "Settings", edit_user_path(@user) %>
+      </h2>
     </section>
   </aside>
-  <div class="col-md-8">
+  <div class="col-md-8 post-container">
     <% if @user.microposts.any? %>
-        <h3>Microposts (<%= @user.microposts.count %>)</h3>
+        <h3 id="post-title">Thoughts (<%= @user.microposts.count %>)</h3>
         <ol class="microposts">
           <%= render @microposts %>
         </ol>
