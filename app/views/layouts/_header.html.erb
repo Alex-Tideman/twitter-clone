@@ -1,13 +1,13 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <%= link_to "effortFul", root_path, class: "logo" %>
-    <nav id="nav-bar">
+    <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
+        <li class="hvr-float-shadow"><%= link_to "Home", root_path %></li>
+        <li class="hvr-float-shadow"><%= link_to "Help", help_path %></li>
         <% if logged_in? %>
-            <li><%= link_to "Users", '#' %></li>
-            <li class="dropdown">
+            <li class="hvr-float-shadow"><%= link_to "Users", '#' %></li>
+            <li class="dropdown hvr-float-shadow">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Account <b class="caret"></b>
               </a>
@@ -21,7 +21,7 @@
               </ul>
             </li>
         <% else %>
-            <li><%= link_to "Log in", login_path %></li>
+            <li class="hvr-float-shadow"><%= link_to "Log in", login_path %></li>
         <% end %>
       </ul>
     </nav>

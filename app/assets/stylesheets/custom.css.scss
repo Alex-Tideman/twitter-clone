@@ -5,6 +5,57 @@
 
 $gray-medium-light: #eaeaea;
 
+@mixin prefixed($property, $value) {
+  @if $webkit == true {
+    -webkit-#{$property}: #{$value};
+  }
+
+  @if $moz == true {
+    -moz-#{$property}: #{$value};
+  }
+
+  @if $ms == true {
+    -ms-#{$property}: #{$value};
+  }
+
+  @if $o == true {
+    -o-#{$property}: #{$value};
+  }
+
+  #{$property}: #{$value};
+}
+
+// prefix keyframes
+@mixin keyframes($name) {
+  @if $webkit == true {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $moz == true {
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $ms == true {
+    @-ms-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $o == true {
+    @-o-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
 /* universal */
 
 body {
@@ -78,31 +129,43 @@ p {
 }
 
 
-#nav-bar li:hover {
-  background-color: rgba(0,128,0,.3);
+.hvr-float-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0px);
+  backface-visibility: hidden;
+  position: relative;
+  transition-duration: 0.3s;
+  transition-property: transform;
 }
 
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+  transform: translateY(-5px);
+  box-shadow: green 1px 10px 20px;
 
+}
 
 /* home page */
 #home-box {
   opacity: .85;
-  background-color: green;
+  background-color: black;
   margin: 50px auto auto 50px;
 }
 
 #logo-word {
   margin-left:-20%;
+  color: white;
 }
 
 #ful {
   color: green;
-  text-shadow: black 1px 10px 20px;
+  text-shadow: green 1px 10px 20px;
 }
 
 #btn-home {
   background: black;
   width: 200px;
+  border-color: green;
 }
 /* footer */
 
@@ -229,3 +292,4 @@ input {
   width: auto;
   margin-left: 0;
 }
+
