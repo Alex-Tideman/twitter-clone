@@ -147,15 +147,31 @@ p {
 }
 
 /* home page */
+.home-container {
+  background-color: green;
+  border-radius: 5px;
+}
+
 #home-box {
   opacity: .85;
   background-color: black;
-  margin: 50px auto auto 50px;
+  margin: 50px 50px 150px 50px;
 }
 
 #logo-word {
-  margin-left:-20%;
+  margin-left:-16%;
   color: white;
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0px);
+  backface-visibility: hidden;
+  position: relative;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+#logo-word:hover {
+  transform: translateY(-35px);
 }
 
 #ful {
