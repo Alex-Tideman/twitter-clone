@@ -1,11 +1,18 @@
+<% provide(:title, "Home") %>
+
 <div class="home-container">
-  <% provide(:title, "Home") %>
-  <div id="home-box" class="center jumbotron">
+<div id="home-box" class="center jumbotron">
   <h1><span id="logo-word">be</span> <span class="logo">Effort<span id="ful">Ful</span></span></h1>
   <p>
         <br><br>Slogan to go here, can't think of anything good.
   </p>
 
-  <%= link_to "Start Something", signup_path, class: "btn btn-lg btn-primary", id: "btn-home" %>
+<% if logged_in? %>
+    <%= link_to "Share Something", new_micropost_path, class: "btn btn-lg btn-primary", id: "btn-home" %>
+<% else %>
+      <%= link_to "Start Something", signup_path, class: "btn btn-lg btn-primary", id: "btn-home" %>
+<% end %>
 </div>
 </div>
+
+
