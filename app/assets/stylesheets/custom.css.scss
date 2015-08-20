@@ -142,6 +142,7 @@ p {
 .hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
   transform: translateY(-5px);
   box-shadow: green 1px 10px 20px;
+  border-radius: 5px;
 
 }
 
@@ -293,3 +294,14 @@ input {
   margin-left: 0;
 }
 
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
